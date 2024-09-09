@@ -74,9 +74,7 @@ The Chi-square test for independence is applicable where one wishes to settled w
  Steps to Apply the Chi-square Test:Steps to Apply the Chi-square Test: 
  Construct a Contingency Table: Devise a table below where one can display the total number of times each of the categories for the two variables occurs. For example, a table with the frequency of the shipping modes such as Standard, Expedited, Same-Day with the type of customers using the services; Retail, Corporate, Small Business. 
  
- Calculate Expected Frequencies: Since All the Variables Are Assumed to Be Independent of One Another Calculate the Expected Frequencies of Each Cell in the Table. This Is Done Using the Formula:This Is Done Using the Formula: 
- Expected Frequency
- = 
+ Calculate Expected Frequencies: Since All The Variable Are Assumed To Be Independent Of One Another Calculate The Expected Frequencies Of Each Cell In The Table.This Is Done Using The Formula
  ( 
  Row total 
  × 
@@ -304,3 +302,100 @@ Understanding Segmented Performance: Preliminary aggregate statistics enable the
  
  plt. show() 
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Question:-2
+However, in the data analysis procedure, the phase of loading and inspecting the dataset and analyzing them creates a significant aspect in DA technique. The following is a breakdown of the code and what the code is for, and this is a step by step guide on how to explore a dataset using python.
+
+Step 1: Required Libraries H2 and Hikari-cp are imported.
+Code:
+import pandas as pd
+
+import numpy as np
+
+import matplotlib. pyplot as plt
+
+import seaborn as sns
+
+%matplotlib inline
+
+Explanation:
+pandas: This library is mandatory for operations involving structured data, particularly in the form of tables: it helps to load, process and analyze datasets.
+numpy: Combined with pandas, it performs other basic operations such as mathematical computations on the data.
+matplotlib. pyplot: This is for the purposes of drawing figures such as charts and graphs which make it easier to understand the data patterns.
+seaborn: A powerful tool, which is destined to become one of the most effective solutions in the creation of beautiful and useful plots.
+%matplotlib inline: They make sure that all the created visualizations are displayed in the notebook space which is helpful while working in frameworks such as Jupyter.
+Marks Allocation: 4/20 (Importing of libraries is very important in order to make the data analysis tools to run effectively).
+
+Step 2: As for the pattern, the loading of the dataset demonstrates the complexities in creating models for machine learning.
+Code:
+
+df = pd. read_csv(‘ your_dataset.csv’)
+
+Explanation:
+pd. read_csv() takes data from a CSV file and loads the data into pandas data frame which is denote by ‘df’. The argument ‘your_dataset. csv’ should be replaced with the path or with the name of the file with the dataset.
+This function just builds the datasets within the CSV data in the shape of records as rows and the features as column way.
+Importance:
+Charging the dataset correctly is the primary and a onerous step since it makes the data available for analysis.
+So let’s use DataFrame for data manipulation because it is much easier to work with, organize, and clean it up.
+
+Step 3: Selecting the Structure for the First Few Rows 
+Code:
+
+ print("First 5 rows of the dataset:This may be in the form of [‘the URL of the article itself,’ ‘<www. bufadora. com/ARTICLE-URL HERE>’]. 
+ print(df. head()) 
+ 
+ Explanation: 
+ df. head() shows the first 5 rows of the dataset at once, although, one has an option of showing an n number of rows by inputting the number inside the head() bracket (e. g. df. head(10) to display first ten rows). 
+ Importance: 
+ Checking an overview of data allows you to get an idea of the organization of information on the selection of columns, the types of data, the identification of outliers. 
+ You have a clear perceivable vision of how the dataset is arranged, which guide the next steps you want to take in the analysis. 
+ 
+ Step 4: Summary Statistics 
+ 
+ print("\nSummary Statistics:")
+ 
+ print(df. describe()) 
+ 
+ Explanation: 
+ -df. The function describe() offers basic statistics summary of the numerical variables in the data frame. This includes: 
+ 
+ -Count: Number of values in attribute that is not null. 
+ 
+ -Mean: The mean of the data set: Arithmetical mean of the data points. 
+ 
+ -Standard Deviation (std): Coalition of the data points. 
+ 
+ -Min, Max: Range of data. 
+ 
+ -Percentiles (25%, 50%, 75%): In addition, explain the nature of the data and the distribution of data. 
+ 
+ Importance: 
+ -Descriptive measurements provide a snapshot of the data and allows for the understanding of the distribution, the central tendency and variability of the data. 
+ -These metrics allow to discover alerting anomalies, trends and other patterns in a data set at the very initial stage of analysis 
+
+
+Step 5: Handling for missing Observations 
+ print("\nMissing Values in the Dataset:This is why it is crucial to comprehend the text as institutionally, it is most apparent in fixating on its precise form and grammar, as <air filled>institutional reading||Here I agree with you, Read this [because]: prove its importance and usefulness or for some other reason as it is apparent, institutionally, mostly in paying attention to the text’s form and grammar, <air filled>institutional reading. 
+ 
+ print(df. isnull(). sum()) 
+ 
+ Explanation: 
+ -df. isnull(). sum() also performs the detection of missing values by column and gives the count of null ‘NaN’ values in every column. 
+ -These missing data can distort the analysis and so it is very important to address them right from the beginning. 
+ 
+ Importance: 
+ -Missing values detection is an initial important step before getting into further analysis or building any model. 
+ -It allows you identify a way to proceed with the missing values for instance imputing, deleting or even ignoring depending on the situation.
