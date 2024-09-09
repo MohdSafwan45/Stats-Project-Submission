@@ -1,5 +1,7 @@
 *Question:-1
+
 Data Handling-
+
 =Question:-How would you handle missing values in a dataset? Describe at least two methods.
 Answer:-
 Dealing with missing value is important to avoid compromising the quality of the analysis that is being made on the data. Here are two common methods:Here are two common methods: 
@@ -43,6 +45,7 @@ This also shows that the application of proper data type can also enhance memory
 In conclusion, the data type conversion provides the guarantee of proper processing and analysis of the data; appropriate calculations are made hence enhancing the performance of the analysis.
 
 Statistical Analysis-
+
 =Question:-
 What is a T-test, and in what scenarios would you use it? Provide an example based on sales data.
 Answer:
@@ -71,8 +74,8 @@ The Chi-square test for independence is applicable where one wishes to settled w
  Steps to Apply the Chi-square Test:Steps to Apply the Chi-square Test: 
  Construct a Contingency Table: Devise a table below where one can display the total number of times each of the categories for the two variables occurs. For example, a table with the frequency of the shipping modes such as Standard, Expedited, Same-Day with the type of customers using the services; Retail, Corporate, Small Business. 
  
- Calculate Expected Frequencies: Since all the variables are assumed to be independent of one another calculate the expected frequencies of each cell in the table. This is done using the formula:This is done using the formula: 
- Expected frequency 
+ Calculate Expected Frequencies: Since All the Variables Are Assumed to Be Independent of One Another Calculate the Expected Frequencies of Each Cell in the Table. This Is Done Using the Formula:This Is Done Using the Formula: 
+ Expected Frequency
  = 
  ( 
  Row total 
@@ -95,6 +98,7 @@ The Chi-square test for independence is applicable where one wishes to settled w
  I will use the contingency table to determine whether the choice of the shipping mode is dependent on the customer segment In this table, distinctions of the shipping mode are made on the rows while the distinction of the customer segment is on the columns. Use the Chi-square test to determine the likelihood of difference on the observed frequency of the mode of shipping in the different customer segments. Such an outcome would mean that some customers prefer using specific shipping modes.
 
 Univariate and Bivariate Analysis:
+
 =Question:-What is univariate analysis, and what are its key purposes?
 Answer:-
 Descriptive analysis is a family of statistical approaches which includes analyzing one variable only at a given time. The primary approach is again used to present an overview of the data and major characteristics associated with this variable. Such analysis is descriptive in nature and is instrumental in getting an overview of factors under consideration without reference to other factors. 
@@ -118,6 +122,7 @@ Bivariate Analysis
  To sum up, univariate method deals with the description of only one variable at a time while the bivariate method deals with characteristics of two variables which help to understand the nature of association in between them better.
 
 Data Visualization:
+
 =Question:-What are the benefits of using a correlation matrix in data analysis? How would you interpret the results?
 Answer:
 A correlation matrix is a table used in analyzing correlator data in order to reveal the probability coefficients of the given data set of variance. This tool is invaluable in data analysis for several reasons:This tool is invaluable in data analysis for several reasons: 
@@ -164,6 +169,7 @@ Steps:
  In this way, depending on the steps given above, it is possible to enhance the sale trends in the right way which helps to get a vision about the sales performance over the time.
 
 Sales and Profit Analysis:
+
 =Question:How can you identify top-performing product categories based on total sales and profit? Describe the process.
 Answer:
  The most important step in the identification of the beneficial product categories is the assessment of the sales and profit figures that show the categories, which types of products bring the most significant amount of income and profit. Here's a structured approach to achieve this:Here's a structured approach to achieve this: 
@@ -212,6 +218,7 @@ Historical sales analysis for seasonal sales include looking at patterns and tre
  Group Data: This is to enable trend analysis through grouping and summing of the sales data by the right time intervals like the month or quarter. For instance, to aggregate monthly sales:For instance, to aggregate monthly sales: 
  Example Code: 
  monthly_sales = df. groupby(df['Date']. dt. to_period('M')). agg({'Sales': 'sum'}) 
+ 
  It is useful in preventing every day high and low abnormal movements from skewing the results while focusing on mid-term trends. 
  Decompose Time Series: 
  
@@ -224,13 +231,21 @@ Historical sales analysis for seasonal sales include looking at patterns and tre
  
  Create Visuals: It is recommended to plot the sales functions on lines to focus on the relationships with the time series components. For example: 
  Example Code: 
+ 
  plt. figure(figsize=(10, 6)) 
+ 
  plt. ax. plot(moment. monthly_sales. index. to_timestamp(), monthly_sales. Sales, label= ‘Monthly Sales’) 
+ 
  plt. title('Monthly Sales Trends') 
+ 
  plt. xlabel('Date') 
+ 
  plt. ylabel('Sales') 
+ 
  plt. legend() 
+ 
  plt. show() 
+ 
  This plays a big role in finding the highest and the lowest sale period, average sale period or even a general trend of the business. 
  Analyze and Adjust Strategy: 
  
@@ -239,6 +254,7 @@ Historical sales analysis for seasonal sales include looking at patterns and tre
  Following such a process, you will be in a position to analyze seasonal fluctuations meaning you will be able to make good decisions on sales history.
 
 Grouped Statistics:
+
 =Question:Why is it important to calculate grouped statistics for key variables? Provide an example using regional sales data.
 Answer:
 
@@ -260,21 +276,31 @@ Understanding Segmented Performance: Preliminary aggregate statistics enable the
  
  Example Code: 
  regional_summary = df. groupby('Region'). agg({'Sales': 'sum', 'Profit': 'sum'}) 
+ 
  Analyze Metrics: In this type of report comparison of total sales and profits of each region is made for analyzing the regions performance. For example: 
  
  Example Code: 
  regional_summary['Average_Sales_Per_Store'] = df. groupby('Region')['Sales']. mean() 
+ 
  Sort and Interpret: Rank the results obtained in order to ascertain the most productive regions. 
  
  Example Code: 
  top_regions = regional_summary. sort_values(by='Sales', ascending=False) 
+ 
  Visualize: 2 charts showing the sale and profit by the region. For instance: 
  
  Example Code: 
  import matplotlib. pyplot as plt 
+ 
  plt. figure(figsize=(10, 6)) 
+ 
  plt. bar(top_regions. index, top_regions['Sales']) 
+ 
  plt. xlabel('Region') 
+ 
  plt. ylabel('Total Sales') 
+ 
  plt. title('Total Sales by Region') 
+ 
  plt. show() 
+ 
