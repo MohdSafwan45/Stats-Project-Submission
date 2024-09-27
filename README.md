@@ -4,14 +4,14 @@ Data Handling-
 
 =Question:-How would you handle missing values in a dataset? Describe at least two methods.
 Answer:-
-Dealing with missing value is important to avoid compromising the quality of the analysis that is being made on the data. Here are two common methods:Here are two common methods: 
+Dealing with missing value is important to avoid compromising the quality of the analysis that is being made on the data. Here are  two common methods:Here are two common methods: 
  
 a) Imputation 
  Imputation is the process of having missing values replaced with values that are most probably generated from the existent data. This method prove useful when it comes to keeping the structure and size of this particular dataset in check. 
  Mean/Median Imputation: For numerical data one can fill missing values with mean value of that particular column or with the median value of that column. When the distribution is normal or close to normal the mean is used while in skewed distributions the median is used if the affected is less due to the outliers. 
  
  Example: When there are missing ages in the given data missing value imputation where missing values are replaced with average keeps the overall distribution intact. 
- Mode Imputation: If variables are categorical, with a lot of cases missing data can be replaced by the Most Frequent Value (mode). This approach is straightforward; however, this can lead to the biases in case the missing data is missing not at random. 
+ Mode Imputation: If variables are categorical, with a lot of cases missing data can be replaced by the Most Frequent Value (mode). This approach is straightforward; however, this can lead to the biases in case the missing data is missing not at random.        
  Example: In a dataset with missing values in a “Region” column then imputing these with the most frequent region in the data retains the balance of categories. 
 
  b) Deletion 
